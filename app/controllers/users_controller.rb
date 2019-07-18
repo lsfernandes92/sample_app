@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :update, :show, :correct_user]
+  before_action :set_user, only: [:edit, :update, :show, :destroy, :correct_user]
   before_action :logged_in_user, only: [:index, :edit, :update]
   before_action :correct_user, only: [:edit, :update]
 
@@ -33,6 +33,12 @@ class UsersController < ApplicationController
   end
 
   def show
+  end
+
+  def destroy
+    @user.destroy
+    flash[:success] = 'User deleted successfully!'
+    redirect_to users_url
   end
 
   private
