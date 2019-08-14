@@ -108,4 +108,11 @@ RSpec.describe User, type: :model do
       )
     end
   end
+
+  it 'associated micropost should be destroyed' do
+    subject.save
+    subject.microposts.create!(content: 'Lorem Ipsum')
+
+    expect{ subject.destroy }.to change{ Micropost.count }.by(-1)
+  end
 end
