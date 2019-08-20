@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'carrierwave',             '1.2.2'
+gem 'mini_magick',             '4.7.0'
 gem 'i18n', '~> 1.6'
 gem 'faker', '~> 1.9', '>= 1.9.6'
 gem 'will_paginate', '~> 3.1', '>= 3.1.7'
